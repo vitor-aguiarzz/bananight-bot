@@ -1,8 +1,6 @@
 from itertools import count
 import tweepy
-import time
 import random
-import credentials
 
 from os import environ
 API_KEY = environ['API_KEY']
