@@ -31,7 +31,7 @@ def get_tema():
 for tweet in tweepy.Cursor(api.search_tweets, q = terms).items(20):
     status = api.get_status(tweet.id)
     retweeted = status.retweeted 
-    if retweeted == True:
+    if retweeted == True or tweet.user.screen_name == "bananight_bot":
         print("ja foi retweetado")
     else:
         if status.favorited:
